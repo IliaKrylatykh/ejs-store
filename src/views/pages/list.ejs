@@ -1,0 +1,9 @@
+<h1>Список элементов</h1>
+
+<ul>
+	<% list.forEach(item=> { %>
+		<li><a href="/list/<%= item.id %>">
+				<%= item.name %> — <%= item.number.toFixed(3) %>
+			</a></li>
+		<% }) %>
+</ul>
