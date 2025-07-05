@@ -1,5 +1,13 @@
 header {
-	background: #e3bef2;
+	background: var(--color-secondary);
+	height: 10vh;
+
 	padding: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
+
+	border-bottom: 1px solid var(--border-color);
 }

@@ -1,8 +1,3 @@
-html,
-body {
-	height: 100%;
-}
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -11,12 +6,49 @@ body {
 
 main {
 	flex: 1;
-	max-width: 1400px;
-	margin: auto;
 }
 
-footer {
-	background: #eee;
-	padding: 10px;
+.hero {
+	width: 100%;
+	height: 70vh;
+	position: relative;
+}
+
+.hero__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.products__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 24px;
+	padding: 20px 0;
+}
+
+.product-card {
+	background: #f8f8f8;
+	border-radius: 16px;
+	padding: 16px;
 	text-align: center;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-card__image {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 12px;
+}
+
+.product-card__title {
+	font-size: 18px;
+	margin-top: 12px;
+}
+
+.product-card__price {
+	color: #333;
+	font-weight: bold;
+	margin-top: 8px;
 }

@@ -1,4 +1,14 @@
-<h1>Главная страница</h1>
+<section class="hero">
+	<img src="/200.jpg" alt="Main page hero image" class="hero__image" />
+</section>
 
-<p>Количество итераций: <%= numberOfIterations %>
-</p>
+<section class="products">
+	<div class="container">
+		<h2 class="products__title">Наши товары</h2>
+		<div class="products__grid">
+			<% products.forEach(product=> { %>
+				<%- include('../components/product-card', { product }) %>
+					<% }) %>
+		</div>
+	</div>
+</section>

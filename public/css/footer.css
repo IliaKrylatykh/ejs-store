@@ -1,0 +1,13 @@
+footer {
+	background: var(--color-dark);
+
+	padding: 10px;
+
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+p {
+	color: var(--bg-primary);
+}
