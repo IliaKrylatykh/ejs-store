@@ -2,7 +2,7 @@ import express from 'express'
 import expressLayouts from 'express-ejs-layouts'
 import path from 'path'
 import indexRouter from './routes/index'
-import listRouter from './routes/list'
+import productRouter from './routes/product'
 
 const app = express()
 
@@ -15,7 +15,7 @@ app.use(expressLayouts)
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
 app.use('/', indexRouter)
-app.use('/list', listRouter)
+app.use('/product', productRouter)
 
 const port = 8080
 

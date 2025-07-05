@@ -1,5 +1,36 @@
-<h1>Продукт</h1>
+<section class="product-page">
+	<div class="container">
+		<div class="product-page__content">
 
-<ul>
-	<%= item.name %>
-</ul>
+			<div class="product-page__gallery">
+				<img src="/products/<%= product.category %>/<%= product.id %>/<%= product.images[0] %>.png"
+					alt="<%= product.title %>" class="product-page__image--main" />
+
+				<div class="product-page__thumbnails">
+					<% product.images.forEach((img, index)=> { %>
+						<img src="/products/<%= product.category %>/<%= product.id %>/<%= img %>.png"
+							alt="<%= product.title %> фото <%= index + 1 %>" class="product-page__thumb" />
+						<% }) %>
+				</div>
+			</div>
+
+			<div class="product-page__info">
+				<h1 class="product-page__title">
+					<%= product.title %>
+				</h1>
+
+				<p class="product-page__price">
+					<%= product.price %> €
+				</p>
+
+				<% if (product.description) { %>
+					<p class="product-page__description">
+						<%= product.description %>
+					</p>
+					<% } %>
+
+						<button class="product-page__buy-button">Добавить в корзину</button>
+			</div>
+		</div>
+	</div>
+</section>
